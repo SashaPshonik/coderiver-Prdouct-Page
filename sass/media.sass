@@ -1,0 +1,105 @@
+@import "bourbon"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.container
+		width: 100%
+	.main-header
+		.header-left-navigation
+			.main-navigation
+				a
+					margin-right: 35px
+	.about-product
+		.product-info-wrapper
+			padding: 20px 40px 0px
+		.product-info
+			.product-title,
+			.product-price
+			margin-bottom: 30px
+			.product-title
+				br
+					display: none
+		.product-description
+			margin-bottom: 30px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.about-product
+		.product-gallery
+			margin-right: 0
+			flex-direction: column
+			text-align: center
+			.product-small-photos
+				width: auto
+				margin-bottom: 20px
+				margin-right: 0
+				img
+					display: inline-block
+					width: auto
+					margin-right: 15px
+					margin-bottom: 0
+					&:last-child
+						margin-right: 0
+			.product-main-photo
+				margin-bottom: 30px
+				img
+					height: auto
+					width: auto
+		.product-info-wrapper
+			padding: 20px 20px 0px		
+	.recomeded-product
+		.recomended-product-gallery
+			.product-title
+				font-size: 1.6em
+
+@media only screen and (max-width : 768px)
+	.main-header
+		flex-direction: column-reverse
+		align-items: stretch
+		.header-left-navigation
+			justify-content: space-between
+			label
+				display: inline-block
+			.main-navigation
+				display: none
+				position: absolute
+				bottom: -105px
+				right: 0
+				text-align: right
+				background: #fff
+				padding: 10px 20px
+				a
+					display: block
+					margin-bottom: 10px
+					margin-right: 0
+					&:last-child
+						margin-bottom: 0
+		.header-right-navigation
+			margin-bottom: 30px
+			justify-content: center
+	.about-product
+		flex-direction: column
+	.recomeded-product
+		.recomended-product-gallery
+			grid-template-columns: repeat(3, 1fr)
+
+@media only screen and (max-width : 480px)
+	.about-product
+		flex-direction: column
+		.product-gallery
+			.product-main-photo
+				img
+					width: 100%
+		.btn
+			padding: 20px 0 10px
+	.recomeded-product
+		.recomended-product-gallery
+			grid-template-columns: repeat(2, 1fr)
+
+@media only screen and (max-width : 320px)
+	.main-header
+		.header-right-navigation
+			justify-content: space-between
